@@ -2,6 +2,11 @@
   <img src="pictures/main.png" alt="Mint Playbook Banner" width="100%">
 </p>
 
+<p align="center">
+  <img src="pictures/background_black.png" alt="Mint Dark Preview" width="49%">
+  <img src="pictures/background_white.png" alt="Mint Light Preview" width="49%">
+</p>
+
 <h1 align="center">Mint Playbook</h1>
 
 <p align="center">
