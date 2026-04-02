@@ -10,8 +10,8 @@
 </p>
 
 <p align="center">
-  <a href="https://mint-playbook.io">Website</a> ·
-  <a href="https://docs.mint-playbook.io">Docs</a> ·
+  <a href="https://mint-d8.github.io/Mint-Playbook/">Website</a> ·
+  <a href="https://mint-d8.github.io/Mint-Playbook/docs.html">Docs</a> ·
   <a href="https://github.com/Mint-D8/Mint-Playbook/releases">Releases</a>
 </p>
 
@@ -38,7 +38,7 @@ It's not a script that blindly disables everything it can find. It's a carefully
 ## Features
 
 ### A Cleaner Desktop
-The taskbar is stripped back to the essentials: centered, small icons, auto-hide enabled, no clock, no notification center, no tray clutter. File Explorer runs in Compact Mode with file extensions always visible and the Home/Gallery sidebar removed. Desktop icons are hidden by default. It sounds minimal because it is.
+The taskbar is stripped back to the essentials: centered, small icons, auto-hide enabled, no clock, no notification center, no tray clutter. File Explorer runs in Compact Mode with file extensions always visible and the Home/Gallery sidebar removed. Desktop icons are hidden by default.
 
 ### Thorough Debloating
 Microsoft Edge, OneDrive, Teams, and most preinstalled UWP apps are removed properly — not just hidden. The classic Windows 10 right-click context menu is restored, and power-user additions like "Take Ownership" and "Open with Notepad" are included out of the box.
@@ -85,8 +85,25 @@ That's it. Welcome to a cleaner Windows.
 
 ---
 
+## Documentation
+
+Full documentation is available at **[mint-d8.github.io/Mint-Playbook/docs.html](https://mint-d8.github.io/Mint-Playbook/docs.html)**
+
+The docs cover:
+
+- [What is Mint?](https://mint-d8.github.io/Mint-Playbook/docs.html#what-is-mint)
+- [Installation guide](https://mint-d8.github.io/Mint-Playbook/docs.html#installation)
+- [Choosing a preset](https://mint-d8.github.io/Mint-Playbook/docs.html#choosing-preset)
+- [Feature reference](https://mint-d8.github.io/Mint-Playbook/docs.html#debloating) (debloating, privacy, security, desktop, LTSC)
+- [FAQ](https://mint-d8.github.io/Mint-Playbook/docs.html#faq)
+- [Troubleshooting](https://mint-d8.github.io/Mint-Playbook/docs.html#troubleshooting)
+
+---
+
 ## Resources
 
-- **Website** — [mint-playbook.io](https://mint-playbook.io)
-- **Documentation** — [docs.mint-playbook.io](https://docs.mint-playbook.io)
+- **Website** — [mint-d8.github.io/Mint-Playbook](https://mint-d8.github.io/Mint-Playbook/)
+- **Documentation** — [mint-d8.github.io/Mint-Playbook/docs.html](https://mint-d8.github.io/Mint-Playbook/docs.html)
 - **GitHub** — [github.com/Mint-D8/Mint-Playbook](https://github.com/Mint-D8/Mint-Playbook)
+- **Releases** — [github.com/Mint-D8/Mint-Playbook/releases](https://github.com/Mint-D8/Mint-Playbook/releases)
+- **AME Wizard** — [ameliorated.io](https://ameliorated.io)

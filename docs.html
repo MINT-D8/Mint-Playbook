@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Docs — Mint Playbook</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Geist+Mono:wght@300;400;500&family=Geist:wght@300;400;500&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <div class="noise"></div>
+
+  <!-- ── NAV ── -->
+  <nav id="nav" class="scrolled">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">
+        <svg class="logo-icon" width="18" height="18" viewBox="0 0 18 18" fill="none">
+          <path d="M9 1L16 5V13L9 17L2 13V5L9 1Z" stroke="currentColor" stroke-width="1.2" fill="none"/>
+          <path d="M9 5L12 7V11L9 13L6 11V7L9 5Z" fill="currentColor" opacity="0.5"/>
+        </svg>
+        <span>Mint</span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="index.html#features">Features</a></li>
+        <li><a href="index.html#presets">Presets</a></li>
+        <li><a href="index.html#install">Install</a></li>
+        <li><a href="docs.html" style="color: var(--mint)">Docs</a></li>
+        <li><a href="https://github.com/Mint-D8/Mint-Playbook/releases" target="_blank" class="nav-cta">Download</a></li>
+      </ul>
+      <button class="burger" id="burger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <div class="mobile-menu" id="mobile-menu">
+      <a href="index.html#features">Features</a>
+      <a href="index.html#presets">Presets</a>
+      <a href="index.html#install">Install</a>
+      <a href="docs.html">Docs</a>
+      <a href="https://github.com/Mint-D8/Mint-Playbook/releases" target="_blank">Download</a>
+    </div>
+  </nav>
+
+  <!-- ── DOCS LAYOUT ── -->
+  <div class="docs-layout">
+
+    <!-- SIDEBAR -->
+    <aside class="docs-sidebar">
+
+      <div class="sidebar-section">
+        <div class="sidebar-heading">Introduction</div>
+        <ul class="sidebar-links">
+          <li><a href="#what-is-mint" class="active">What is Mint?</a></li>
+          <li><a href="#philosophy">Philosophy</a></li>
+          <li><a href="#requirements">Requirements</a></li>
+        </ul>
+      </div>
+
+      <div class="sidebar-section">
+        <div class="sidebar-heading">Getting Started</div>
+        <ul class="sidebar-links">
+          <li><a href="#installation">Installation</a></li>
+          <li><a href="#choosing-preset">Choosing a Preset</a></li>
+          <li><a href="#optional-components">Optional Components</a></li>
+        </ul>
+      </div>
+
+      <div class="sidebar-section">
+        <div class="sidebar-heading">Presets</div>
+        <ul class="sidebar-links">
+          <li><a href="#preset-balanced">Balanced</a></li>
+          <li><a href="#preset-gaming">Gaming Focused</a></li>
+          <li><a href="#preset-performance">Performance Focused</a></li>
+          <li><a href="#preset-privacy">Privacy Focused</a></li>
+          <li><a href="#preset-paranoid">Paranoid Mode</a></li>
+        </ul>
+      </div>
+
+      <div class="sidebar-section">
+        <div class="sidebar-heading">Features</div>
+        <ul class="sidebar-links">
+          <li><a href="#debloating">Debloating</a></li>
+          <li><a href="#privacy">Privacy</a></li>
+          <li><a href="#security">Security</a></li>
+          <li><a href="#desktop">Desktop & UI</a></li>
+          <li><a href="#ltsc">LTSC Conversion</a></li>
+        </ul>
+      </div>
+
+      <div class="sidebar-section">
+        <div class="sidebar-heading">Reference</div>
+        <ul class="sidebar-links">
+          <li><a href="#faq">FAQ</a></li>
+          <li><a href="#troubleshooting">Troubleshooting</a></li>
+          <li><a href="#changelog">Changelog</a></li>
+        </ul>
+      </div>
+
+    </aside>
+
+    <!-- CONTENT -->
+    <main class="docs-content">
+
+      <!-- INTRODUCTION -->
+      <section id="what-is-mint" class="doc-section">
+        <div class="docs-eyebrow">Introduction</div>
+        <h1>Mint Playbook</h1>
+        <p>Mint is a Windows playbook that does what most people wish Windows did by default: removes the junk, locks down the privacy leaks, and gets out of your way. It's deployed through <a href="https://ameliorated.io" target="_blank">AME Wizard</a> — a trusted, open-source Windows configuration tool.</p>
+        <p>It's not a script that blindly disables everything it can find. Mint is a carefully considered overhaul that strips telemetry, kills unnecessary services, and debloats the OS — while keeping things stable enough for everyday use.</p>
+        <div class="callout">
+          <strong>Note:</strong> A clean Windows install is strongly recommended before applying Mint. Always create a system restore point before proceeding.
+        </div>
+      </section>
+
+      <section id="philosophy" class="doc-section">
+        <h2>Philosophy</h2>
+        <p>Most optimization tools sacrifice something — either they gut security in the name of performance, or they apply aggressive privacy tweaks that break normal workflows. Mint takes a different approach.</p>
+        <h3>Three pillars</h3>
+        <ul>
+          <li><strong>Performance</strong> — Background processes and non-essential services are disabled at the source. Less CPU overhead, less RAM waste, more of your hardware dedicated to what you care about.</li>
+          <li><strong>Privacy</strong> — Microsoft's data collection runs deep. Registry modifications, host-level blocks, and systematic dismantling of telemetry pipelines mean your data stays on your machine.</li>
+          <li><strong>Security</strong> — Attack Surface Reduction rules, exploit protection, and hardened authentication policies are all included. A fast system that's also compromised isn't much use to anyone.</li>
+        </ul>
+      </section>
+
+      <section id="requirements" class="doc-section">
+        <h2>Requirements</h2>
+        <h3>Supported Windows versions</h3>
+        <table class="docs-table">
+          <thead>
+            <tr>
+              <th>Version</th>
+              <th>Build</th>
+              <th>Status</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>Windows 10</td><td>22H2</td><td>✓ Supported</td></tr>
+            <tr><td>Windows 11</td><td>22H2</td><td>✓ Supported</td></tr>
+            <tr><td>Windows 11</td><td>23H2</td><td>✓ Supported</td></tr>
+            <tr><td>Windows 11</td><td>24H2</td><td>✓ Supported</td></tr>
+            <tr><td>Windows 11</td><td>25H2</td><td>✓ Supported</td></tr>
+          </tbody>
+        </table>
+        <h3>Tools needed</h3>
+        <ul>
+          <li><a href="https://ameliorated.io" target="_blank">AME Wizard</a> — the wizard that runs the playbook</li>
+          <li>The latest <code>Mint.apbx</code> from the <a href="https://github.com/Mint-D8/Mint-Playbook/releases" target="_blank">Releases page</a></li>
+          <li>A stable internet connection (for optional component downloads)</li>
+          <li>Administrator privileges on your machine</li>
+        </ul>
+      </section>
+
+      <!-- GETTING STARTED -->
+      <section id="installation" class="doc-section">
+        <h2>Installation</h2>
+        <p>Follow these steps carefully. The process is straightforward, but skipping steps can lead to issues.</p>
+
+        <h3>Step 1 — Download AME Wizard</h3>
+        <p>Get the latest AME Wizard from <a href="https://ameliorated.io" target="_blank">ameliorated.io</a>. This is the tool that reads and applies the Mint playbook.</p>
+
+        <h3>Step 2 — Download Mint</h3>
+        <p>Head to the <a href="https://github.com/Mint-D8/Mint-Playbook/releases" target="_blank">Releases page on GitHub</a> and download the latest <code>Mint.apbx</code> file.</p>
+
+        <h3>Step 3 — Import the playbook</h3>
+        <p>Open AME Wizard and drag the <code>Mint.apbx</code> file into the window, or use the import button. You'll be prompted for a decryption password.</p>
+        <div class="callout">
+          <strong>Decryption password:</strong> <code>malte</code>
+        </div>
+
+        <h3>Step 4 — Choose a preset</h3>
+        <p>AME Wizard will display the available presets and optional components. Select the one that best matches your use case. See <a href="#choosing-preset">Choosing a Preset</a> below for guidance.</p>
+
+        <h3>Step 5 — Apply and restart</h3>
+        <p>Click Apply and let AME Wizard do its work. The process may take 10–20 minutes depending on your hardware. When complete, restart your system to finalize all changes.</p>
+      </section>
+
+      <section id="choosing-preset" class="doc-section">
+        <h2>Choosing a Preset</h2>
+        <p>Mint ships with five profiles. Each one builds on the previous — Paranoid Mode includes everything in Balanced, plus additional restrictions.</p>
+        <table class="docs-table">
+          <thead>
+            <tr>
+              <th>Preset</th>
+              <th>Best for</th>
+              <th>Intensity</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>Balanced</td><td>Everyday use, beginners</td><td>●●○○○</td></tr>
+            <tr><td>Gaming Focused</td><td>Competitive gaming, low latency</td><td>●●●○○</td></tr>
+            <tr><td>Performance Focused</td><td>Workstations, demanding workloads</td><td>●●●●○</td></tr>
+            <tr><td>Privacy Focused</td><td>Privacy-conscious users</td><td>●●●●○</td></tr>
+            <tr><td>Paranoid Mode</td><td>Maximum control, advanced users</td><td>●●●●●</td></tr>
+          </tbody>
+        </table>
+        <div class="callout">
+          <strong>Tip:</strong> If you're unsure, start with <strong>Balanced</strong>. You can always re-run the playbook with a different preset.
+        </div>
+      </section>
+
+      <section id="optional-components" class="doc-section">
+        <h2>Optional Components</h2>
+        <p>During setup, AME Wizard presents optional components you can enable or disable. These include things like:</p>
+        <ul>
+          <li>LTSC Edition Conversion</li>
+          <li>Additional host-file blocks</li>
+          <li>Power plan modifications</li>
+          <li>Classic context menu restore</li>
+          <li>Driver and update policy adjustments</li>
+        </ul>
+        <p>All optional components are safe to apply on top of any preset. Enable the ones relevant to your workflow and skip the rest.</p>
+      </section>
+
+      <!-- PRESETS -->
+      <section id="preset-balanced" class="doc-section">
+        <h2>Balanced</h2>
+        <p>A sensible everyday setup. Fast, functional, and stable without going overboard on restrictions.</p>
+        <p>This preset removes obvious bloat (Edge, OneDrive, Teams, most UWP apps), disables the most egregious telemetry services, and applies modest taskbar and Explorer improvements. It's the right starting point for most users.</p>
+        <h3>What it includes</h3>
+        <ul>
+          <li>Core debloating (Edge, OneDrive, Teams, UWP apps)</li>
+          <li>Basic telemetry service disabling</li>
+          <li>Taskbar minimalism (auto-hide, centered, small icons)</li>
+          <li>Classic right-click context menu</li>
+          <li>Explorer compact mode, file extensions visible</li>
+        </ul>
+      </section>
+
+      <section id="preset-gaming" class="doc-section">
+        <h2>Gaming Focused</h2>
+        <p>Built for competitive gaming and low-latency workloads. Everything in Balanced, plus game-specific optimizations.</p>
+        <h3>Additional changes</h3>
+        <ul>
+          <li>Game processes are elevated in scheduler priority</li>
+          <li>Network throttling and Nagle's algorithm disabled</li>
+          <li>GPU and CPU power plan set to High Performance</li>
+          <li>Background app suspension for non-game processes</li>
+          <li>Mouse and input latency settings tuned</li>
+        </ul>
+      </section>
+
+      <section id="preset-performance" class="doc-section">
+        <h2>Performance Focused</h2>
+        <p>Aggressive resource reduction for demanding workloads. Every background cycle is accounted for.</p>
+        <h3>Additional changes</h3>
+        <ul>
+          <li>All non-essential Windows services disabled</li>
+          <li>Aggressive prefetch and superfetch tuning</li>
+          <li>Memory compression and paging adjustments</li>
+          <li>Background indexing and search disabled</li>
+          <li>Hyper-V and virtualization overhead removed (optional)</li>
+        </ul>
+        <div class="callout">
+          <strong>Note:</strong> Some software that relies on Windows services may behave unexpectedly under this preset. Test your workflow before relying on it.
+        </div>
+      </section>
+
+      <section id="preset-privacy" class="doc-section">
+        <h2>Privacy Focused</h2>
+        <p>All telemetry hosts blocked, cloud-integrated features disabled. Minimal footprint.</p>
+        <h3>Additional changes</h3>
+        <ul>
+          <li>Comprehensive hosts-file block list applied</li>
+          <li>All Microsoft telemetry endpoints blocked at network level</li>
+          <li>Cortana, Windows Search cloud integration, and activity history disabled</li>
+          <li>Advertising ID, app diagnostics, and feedback settings locked down</li>
+          <li>Location services and camera/microphone access restricted by default</li>
+        </ul>
+      </section>
+
+      <section id="preset-paranoid" class="doc-section">
+        <h2>Paranoid Mode</h2>
+        <p>Maximum aggression across the board. Every block, every lock, fully applied. Not for the faint of heart.</p>
+        <p>This preset includes everything from all other presets, plus the most restrictive possible settings across telemetry, networking, authentication, and service management.</p>
+        <div class="callout">
+          <strong>Warning:</strong> Paranoid Mode will break some features and third-party software. This preset is intended for advanced users who know what they're disabling and why.
+        </div>
+        <h3>Additional changes over Privacy Focused</h3>
+        <ul>
+          <li>All optional Windows features disabled</li>
+          <li>Windows Update completely controlled, driver updates blocked</li>
+          <li>Remote access (RDP, WinRM) disabled</li>
+          <li>All cloud-synced settings (wallpaper, themes, passwords) blocked</li>
+          <li>SmartScreen, WDAC, and AppLocker fully configured</li>
+        </ul>
+      </section>
+
+      <!-- FEATURES -->
+      <section id="debloating" class="doc-section">
+        <h2>Debloating</h2>
+        <p>Mint removes apps and components that ship with Windows by default but provide little value to most users. Unlike other tools that simply hide or disable these apps, Mint removes them properly at the package level.</p>
+        <h3>Removed applications</h3>
+        <ul>
+          <li>Microsoft Edge (browser)</li>
+          <li>OneDrive</li>
+          <li>Microsoft Teams</li>
+          <li>Xbox app and Game Bar</li>
+          <li>Cortana</li>
+          <li>Microsoft Store (optional)</li>
+          <li>Most preinstalled UWP applications (Weather, News, Tips, etc.)</li>
+        </ul>
+        <p>Core Windows functionality is preserved. Things like Windows Defender, File Explorer, Settings, and Windows Update are kept intact (or optionally configured — not removed).</p>
+      </section>
+
+      <section id="privacy" class="doc-section">
+        <h2>Privacy</h2>
+        <p>Windows ships with extensive telemetry and data collection baked in at every layer. Mint addresses this systematically.</p>
+        <h3>What Mint blocks</h3>
+        <ul>
+          <li><strong>Telemetry services</strong> — DiagTrack, dmwappushservice, and related daemons are disabled</li>
+          <li><strong>Registry modifications</strong> — Data collection and advertising keys set to off at the registry level</li>
+          <li><strong>Host-level blocks</strong> — Known Microsoft telemetry, advertising, and tracking hostnames blocked in the hosts file</li>
+          <li><strong>Scheduled tasks</strong> — Telemetry-related scheduled tasks are removed or disabled</li>
+          <li><strong>Group Policy</strong> — Enterprise-level policy settings are applied to lock down data sharing</li>
+        </ul>
+      </section>
+
+      <section id="security" class="doc-section">
+        <h2>Security</h2>
+        <p>Mint doesn't trade security for performance. All presets include a security baseline that goes beyond Windows defaults.</p>
+        <h3>Security hardening applied</h3>
+        <ul>
+          <li><strong>Attack Surface Reduction (ASR) rules</strong> — Microsoft's built-in exploit mitigation rules are enabled</li>
+          <li><strong>Exploit protection</strong> — System-wide exploit protection settings configured via Windows Defender</li>
+          <li><strong>Authentication hardening</strong> — Credential guard, NTLMv2 enforcement, and related policies</li>
+          <li><strong>Firewall rules</strong> — Default-deny outbound rules for known telemetry processes</li>
+          <li><strong>UAC settings</strong> — User Account Control kept at or above default levels</li>
+        </ul>
+      </section>
+
+      <section id="desktop" class="doc-section">
+        <h2>Desktop & UI</h2>
+        <p>Mint applies a set of desktop refinements that reduce visual clutter and improve day-to-day usability.</p>
+        <h3>Taskbar</h3>
+        <ul>
+          <li>Auto-hide enabled</li>
+          <li>Centered icons layout</li>
+          <li>Small icons mode</li>
+          <li>Clock, notification center, and tray clutter removed</li>
+        </ul>
+        <h3>File Explorer</h3>
+        <ul>
+          <li>Compact mode enabled</li>
+          <li>File extensions always visible</li>
+          <li>Home and Gallery sidebar sections removed</li>
+          <li>"Open with Notepad" and "Take Ownership" added to context menu</li>
+        </ul>
+        <h3>General</h3>
+        <ul>
+          <li>Classic Windows 10 right-click context menu restored on Win11</li>
+          <li>Desktop icons hidden by default</li>
+          <li>Transparency effects reduced for clarity</li>
+        </ul>
+      </section>
+
+      <section id="ltsc" class="doc-section">
+        <h2>LTSC Conversion</h2>
+        <p>Mint includes an optional genuine edition conversion to Windows Enterprise LTSC (Long-Term Servicing Channel). This is not a crack or workaround — it's a legitimate edition switch using Microsoft's own tooling.</p>
+        <h3>What is LTSC?</h3>
+        <p>Windows Enterprise LTSC is designed for stability. It ships without many of the preinstalled apps and features found in consumer Windows, receives fewer disruptive feature updates, and is supported for 10 years per release. It's the version used in hospitals, factories, and critical infrastructure for a reason.</p>
+        <h3>What LTSC removes</h3>
+        <ul>
+          <li>Microsoft Store (not included in LTSC)</li>
+          <li>UWP app auto-updates</li>
+          <li>Feature updates on Microsoft's consumer schedule</li>
+          <li>Many preinstalled consumer apps</li>
+        </ul>
+        <div class="callout">
+          <strong>Note:</strong> LTSC conversion is an optional component during setup. You don't have to apply it to use Mint.
+        </div>
+      </section>
+
+      <!-- REFERENCE -->
+      <section id="faq" class="doc-section">
+        <h2>FAQ</h2>
+
+        <h3>Is Mint safe to use?</h3>
+        <p>Yes. Mint is open source — you can inspect every change it makes before running it. It's distributed as an <code>.apbx</code> playbook file that AME Wizard reads and applies. Nothing happens without your explicit approval.</p>
+
+        <h3>Will Mint break my apps?</h3>
+        <p>Most mainstream software works fine on Balanced and Gaming presets. More aggressive presets (Performance, Privacy, Paranoid) may break apps that rely on specific Windows services. Test your critical software before committing.</p>
+
+        <h3>Can I undo Mint?</h3>
+        <p>Create a system restore point before applying Mint. That's the safest rollback option. Some individual settings can be reversed manually, but a full undo isn't built into Mint — hence the recommendation for a clean install.</p>
+
+        <h3>Does Mint work with Windows Update?</h3>
+        <p>Yes, on Balanced, Gaming, and Performance presets, Windows Update continues to function normally for security patches. On Privacy and Paranoid presets, Windows Update is more aggressively controlled — you may need to manually trigger updates.</p>
+
+        <h3>What is the decryption password?</h3>
+        <p>The password to decrypt <code>Mint.apbx</code> in AME Wizard is: <code>malte</code></p>
+
+        <h3>Does Mint work on Windows 11?</h3>
+        <p>Yes. Mint supports Windows 11 versions 22H2, 23H2, 24H2, and 25H2, as well as Windows 10 22H2.</p>
+
+        <h3>Is Mint affiliated with Ameliorated?</h3>
+        <p>No. Mint is an independent project that uses AME Wizard as its deployment tool. AME Wizard is made by the Ameliorated team and is free, open-source software.</p>
+      </section>
+
+      <section id="troubleshooting" class="doc-section">
+        <h2>Troubleshooting</h2>
+
+        <h3>AME Wizard fails to import the playbook</h3>
+        <p>Ensure you're using the latest version of AME Wizard from <a href="https://ameliorated.io" target="_blank">ameliorated.io</a>. Older versions may not support newer playbook formats. Also confirm the <code>.apbx</code> file downloaded completely and wasn't corrupted.</p>
+
+        <h3>Wrong password error</h3>
+        <p>The decryption password is <code>malte</code> (all lowercase). Make sure there are no trailing spaces when pasting.</p>
+
+        <h3>The playbook stops partway through</h3>
+        <p>This usually happens when Windows Defender or a third-party antivirus blocks AME Wizard. Temporarily disable real-time protection before running the playbook. Re-enable it after the restart is complete.</p>
+
+        <h3>Specific app stopped working after Mint</h3>
+        <p>If an app fails after applying Mint, it likely depends on a Windows service or feature that was disabled. Check the app's requirements against the changes made by your chosen preset. You can re-enable individual services through <code>services.msc</code>.</p>
+
+        <h3>Audio/display/network issues after applying</h3>
+        <p>These are rare on Balanced and Gaming presets. If issues occur, first restart the system. If problems persist, use your restore point to roll back and report the issue on the <a href="https://github.com/Mint-D8/Mint-Playbook" target="_blank">GitHub repository</a>.</p>
+      </section>
+
+      <section id="changelog" class="doc-section">
+        <h2>Changelog</h2>
+        <p>For the full version history and release notes, visit the <a href="https://github.com/Mint-D8/Mint-Playbook/releases" target="_blank">Releases page on GitHub</a>.</p>
+
+        <h3>Latest Release</h3>
+        <p>See <a href="https://github.com/Mint-D8/Mint-Playbook/releases" target="_blank">github.com/Mint-D8/Mint-Playbook/releases</a> for the most current release and what changed.</p>
+
+        <h3>Versioning</h3>
+        <p>Mint follows a date-based versioning scheme. Each release is tagged with the Windows version it targets and the date of release. Changelogs are included in each GitHub release.</p>
+      </section>
+
+    </main>
+  </div>
+
+  <!-- ── FOOTER ── -->
+  <footer>
+    <div class="container footer-inner">
+      <div class="footer-logo">
+        <svg class="logo-icon" width="16" height="16" viewBox="0 0 18 18" fill="none"><path d="M9 1L16 5V13L9 17L2 13V5L9 1Z" stroke="currentColor" stroke-width="1.2" fill="none"/><path d="M9 5L12 7V11L9 13L6 11V7L9 5Z" fill="currentColor" opacity="0.5"/></svg>
+        <span>Mint Playbook</span>
+      </div>
+      <nav class="footer-links">
+        <a href="https://mint-d8.github.io/Mint-Playbook/" target="_blank">Home</a>
+        <a href="docs.html">Docs</a>
+        <a href="https://github.com/Mint-D8/Mint-Playbook" target="_blank">GitHub</a>
+        <a href="https://github.com/Mint-D8/Mint-Playbook/releases" target="_blank">Releases</a>
+        <a href="https://ameliorated.io" target="_blank">AME Wizard</a>
+      </nav>
+      <p class="footer-copy">Open source · Built with care</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

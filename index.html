@@ -7,25 +7,28 @@
   <link rel="stylesheet" href="style.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300&family=Syne:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Geist+Mono:wght@300;400;500&family=Geist:wght@300;400;500&display=swap" rel="stylesheet" />
 </head>
 <body>
 
-  <!-- Noise overlay -->
   <div class="noise"></div>
 
-  <!-- ── NAV ───────────────────────────────────────── -->
+  <!-- ── NAV ── -->
   <nav id="nav">
     <div class="nav-inner">
       <a href="#" class="nav-logo">
-        <span class="logo-leaf">◆</span>
+        <svg class="logo-icon" width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M9 1L16 5V13L9 17L2 13V5L9 1Z" stroke="currentColor" stroke-width="1.2" fill="none"/>
+          <path d="M9 5L12 7V11L9 13L6 11V7L9 5Z" fill="currentColor" opacity="0.5"/>
+        </svg>
         <span>Mint</span>
       </a>
       <ul class="nav-links">
         <li><a href="#features">Features</a></li>
         <li><a href="#presets">Presets</a></li>
         <li><a href="#install">Install</a></li>
-        <li><a href="https://github.com/MINT-D8/Mint-Playbook/releases" target="_blank" class="nav-cta">Releases</a></li>
+        <li><a href="docs.html">Docs</a></li>
+        <li><a href="https://github.com/Mint-D8/Mint-Playbook/releases" target="_blank" class="nav-cta">Download</a></li>
       </ul>
       <button class="burger" id="burger" aria-label="Toggle menu">
         <span></span><span></span><span></span>
@@ -35,33 +38,37 @@
       <a href="#features">Features</a>
       <a href="#presets">Presets</a>
       <a href="#install">Install</a>
-      <a href="https://github.com/MINT-D8/Mint-Playbook/releases" target="_blank">Releases</a>
+      <a href="docs.html">Docs</a>
+      <a href="https://github.com/Mint-D8/Mint-Playbook/releases" target="_blank">Download</a>
     </div>
   </nav>
 
-  <!-- ── HERO ──────────────────────────────────────── -->
+  <!-- ── HERO ── -->
   <header class="hero">
-    <div class="hero-grid-lines"></div>
+    <div class="hero-ambient"></div>
     <div class="hero-content">
-      <p class="hero-eyebrow fade-up" data-delay="0">Windows Playbook — AME Wizard</p>
+      <p class="hero-eyebrow fade-up" data-delay="0">
+        <span class="eyebrow-line"></span>
+        Windows Playbook · AME Wizard
+      </p>
       <h1 class="hero-title fade-up" data-delay="100">
         Windows,<br /><em>Refined.</em>
       </h1>
       <p class="hero-sub fade-up" data-delay="200">
-        Mint is a privacy-first, performance-tuned Windows configuration that strips away the noise — telemetry, bloat, and unnecessary services — so your system runs the way it should have from the start.
+        Mint is a privacy-first, performance-tuned Windows configuration. It removes telemetry, bloat, and unnecessary services — so your system works for you.
       </p>
       <div class="hero-actions fade-up" data-delay="300">
-        <a href="https://github.com/MINT-D8/Mint-Playbook/releases" target="_blank" class="btn btn-primary">
-          <span>Download Latest</span>
-          <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M8 1v10M3 7l5 5 5-5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M1 13h14" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+        <a href="https://github.com/Mint-D8/Mint-Playbook/releases" target="_blank" class="btn btn-primary">
+          <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M7 1v8M3 6l4 4 4-4" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/><path d="M1 11h12" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg>
+          Download Latest
         </a>
-        <a href="https://ameliorated.io" target="_blank" class="btn btn-ghost">Get AME Wizard ↗</a>
+        <a href="docs.html" class="btn btn-ghost">Read the Docs →</a>
       </div>
       <div class="hero-meta fade-up" data-delay="400">
         <span class="badge">Win 10 22H2</span>
         <span class="badge">Win 11 22H2–25H2</span>
         <span class="badge">5 Presets</span>
-        <span class="badge">LTSC Conversion</span>
+        <span class="badge">LTSC</span>
       </div>
     </div>
     <div class="hero-visual fade-up" data-delay="200">
@@ -79,82 +86,115 @@
     </div>
   </header>
 
-  <!-- ── PILLARS ────────────────────────────────────── -->
+  <!-- ── PILLARS ── -->
   <section class="pillars">
     <div class="container">
       <div class="section-label">Core Philosophy</div>
       <div class="pillars-grid">
+
         <div class="pillar-card scroll-reveal">
-          <div class="pillar-icon">⚡</div>
+          <div class="pillar-icon">
+            <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M11 2L4 6V11C4 15.1 7.1 18.9 11 20C14.9 18.9 18 15.1 18 11V6L11 2Z" stroke="currentColor" stroke-width="1.3" stroke-linejoin="round"/>
+              <path d="M8 11L10 13L14 9" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
           <h3>Performance</h3>
-          <p>Non-essential services and background processes are cut from the root. Lower latency, less RAM overhead, more horsepower for what actually matters.</p>
+          <p>Non-essential services cut from the root. Lower latency, less overhead, more horsepower for what actually matters.</p>
         </div>
-        <div class="pillar-card scroll-reveal" style="--delay:100ms">
-          <div class="pillar-icon">🔒</div>
+
+        <div class="pillar-card scroll-reveal" style="--delay:80ms">
+          <div class="pillar-icon">
+            <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect x="3" y="3" width="16" height="16" rx="2" stroke="currentColor" stroke-width="1.3"/>
+              <path d="M7 11H15M7 7H11M7 15H13" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"/>
+              <circle cx="16" cy="6" r="3" fill="var(--mint)" opacity="0.3"/>
+              <circle cx="16" cy="6" r="1.5" fill="var(--mint)"/>
+            </svg>
+          </div>
           <h3>Privacy</h3>
-          <p>Deep registry edits, host-level blocks, and systematic dismantling of Microsoft's telemetry stack. Your data stays yours — full stop.</p>
+          <p>Registry edits, host-level blocks, systematic dismantling of Microsoft's telemetry. Your data stays yours.</p>
         </div>
-        <div class="pillar-card scroll-reveal" style="--delay:200ms">
-          <div class="pillar-icon">🛡</div>
+
+        <div class="pillar-card scroll-reveal" style="--delay:160ms">
+          <div class="pillar-icon">
+            <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M11 2L3 5.5V10.5C3 15 6.5 19 11 20.5C15.5 19 19 15 19 10.5V5.5L11 2Z" stroke="currentColor" stroke-width="1.3" stroke-linejoin="round"/>
+              <path d="M8 10.5L10.5 13L14.5 9" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
           <h3>Security</h3>
-          <p>Attack Surface Reduction rules, exploit protection, and hardened authentication policies — security that doesn't take a back seat to speed.</p>
+          <p>ASR rules, exploit protection, hardened auth policies — security that doesn't take a back seat to speed.</p>
         </div>
+
       </div>
     </div>
   </section>
 
-  <!-- ── FEATURES ──────────────────────────────────── -->
+  <!-- ── FEATURES ── -->
   <section class="features" id="features">
     <div class="container">
       <div class="section-label">What Gets Done</div>
-      <h2 class="section-title scroll-reveal">No bloat.<br />No nonsense.</h2>
+      <h2 class="section-title scroll-reveal">No bloat.<br /><em>No noise.</em></h2>
       <div class="features-grid">
 
         <div class="feature-item scroll-reveal">
-          <div class="feature-num">01</div>
+          <div class="feature-icon">
+            <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M3 3h12v12H3z" stroke="currentColor" stroke-width="1.2" rx="1"/><path d="M6 9h6M6 6h4M6 12h3" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg>
+          </div>
           <div class="feature-text">
             <h4>Intelligent Debloating</h4>
-            <p>Edge, OneDrive, Teams, and preinstalled UWP apps are removed properly — not just hidden.</p>
+            <p>Edge, OneDrive, Teams, and preinstalled UWP apps removed properly — not just hidden.</p>
           </div>
         </div>
 
-        <div class="feature-item scroll-reveal" style="--delay:80ms">
-          <div class="feature-num">02</div>
+        <div class="feature-item scroll-reveal" style="--delay:60ms">
+          <div class="feature-icon">
+            <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><rect x="2" y="2" width="14" height="14" rx="2" stroke="currentColor" stroke-width="1.2"/><path d="M5 9h8" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/><circle cx="9" cy="5" r="1" fill="currentColor"/></svg>
+          </div>
           <div class="feature-text">
             <h4>Taskbar Minimalism</h4>
-            <p>Auto-hide, centered, small icons, no clock or tray clutter. Your screen is your workspace.</p>
+            <p>Auto-hide, centered, small icons — no clock or tray clutter. Your screen is your workspace.</p>
           </div>
         </div>
 
-        <div class="feature-item scroll-reveal" style="--delay:160ms">
-          <div class="feature-num">03</div>
+        <div class="feature-item scroll-reveal" style="--delay:120ms">
+          <div class="feature-icon">
+            <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><circle cx="9" cy="9" r="7" stroke="currentColor" stroke-width="1.2"/><path d="M9 5v4l3 2" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg>
+          </div>
           <div class="feature-text">
             <h4>Service Management</h4>
-            <p>Error reporting, telemetry daemons, and background maintenance tasks are selectively disabled.</p>
+            <p>Telemetry daemons and background tasks selectively disabled — not everything, just the waste.</p>
           </div>
         </div>
 
-        <div class="feature-item scroll-reveal" style="--delay:0ms">
-          <div class="feature-num">04</div>
+        <div class="feature-item scroll-reveal">
+          <div class="feature-icon">
+            <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M9 2L16 5v4c0 4-3 6.5-7 7.5C4 15.5 2 13 2 9V5l7-3z" stroke="currentColor" stroke-width="1.2" stroke-linejoin="round"/></svg>
+          </div>
           <div class="feature-text">
-            <h4>LTSC Edition Conversion</h4>
+            <h4>LTSC Conversion</h4>
             <p>Genuine conversion to Windows Enterprise LTSC — the cleanest, most stable Windows available.</p>
           </div>
         </div>
 
-        <div class="feature-item scroll-reveal" style="--delay:80ms">
-          <div class="feature-num">05</div>
+        <div class="feature-item scroll-reveal" style="--delay:60ms">
+          <div class="feature-icon">
+            <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M3 5h12M3 9h8M3 13h10" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/><circle cx="14" cy="9" r="2.5" stroke="currentColor" stroke-width="1.1"/></svg>
+          </div>
           <div class="feature-text">
             <h4>Classic Context Menu</h4>
-            <p>Restores the Win10 right-click menu with power-user additions: Take Ownership, Open with Notepad.</p>
+            <p>Restores Win10 right-click with power additions: Take Ownership, Open with Notepad.</p>
           </div>
         </div>
 
-        <div class="feature-item scroll-reveal" style="--delay:160ms">
-          <div class="feature-num">06</div>
+        <div class="feature-item scroll-reveal" style="--delay:120ms">
+          <div class="feature-icon">
+            <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M4 2h10a1 1 0 011 1v12a1 1 0 01-1 1H4a1 1 0 01-1-1V3a1 1 0 011-1z" stroke="currentColor" stroke-width="1.2"/><path d="M6 6h6M6 9h4M6 12h5" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg>
+          </div>
           <div class="feature-text">
             <h4>Explorer Refinement</h4>
-            <p>Compact mode, file extensions always visible, Home and Gallery sidebar sections removed.</p>
+            <p>Compact mode, extensions always visible, Home and Gallery sidebar removed.</p>
           </div>
         </div>
 
@@ -162,118 +202,133 @@
     </div>
   </section>
 
-  <!-- ── PRESETS ───────────────────────────────────── -->
+  <!-- ── PRESETS ── -->
   <section class="presets" id="presets">
     <div class="container">
       <div class="section-label">Optimization Profiles</div>
-      <h2 class="section-title scroll-reveal">Pick your<br />flavor.</h2>
-      <p class="section-sub scroll-reveal">Five presets tuned to different needs. You choose what gets applied during setup — no post-install tinkering required.</p>
+      <h2 class="section-title scroll-reveal">Pick your<br /><em>flavor.</em></h2>
+      <p class="section-sub scroll-reveal">Five presets tuned to different needs. You choose what gets applied during setup.</p>
       <div class="presets-list">
 
         <div class="preset-row scroll-reveal">
           <div class="preset-left">
             <span class="preset-tag">01</span>
+            <div class="preset-icon">
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="6" stroke="currentColor" stroke-width="1.2"/><path d="M5 8h6M8 5v6" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg>
+            </div>
             <h3>Balanced</h3>
           </div>
-          <p>A solid everyday profile. Fast, functional, and stable — without going overboard on restrictions.</p>
-          <div class="preset-dots">
-            <span class="dot-filled"></span><span class="dot-filled"></span><span class="dot-empty"></span><span class="dot-empty"></span><span class="dot-empty"></span>
-          </div>
+          <p>A solid everyday profile. Fast, functional, and stable without going overboard.</p>
+          <div class="preset-meter" data-level="2"></div>
         </div>
 
-        <div class="preset-row scroll-reveal" style="--delay:60ms">
+        <div class="preset-row scroll-reveal" style="--delay:50ms">
           <div class="preset-left">
             <span class="preset-tag">02</span>
+            <div class="preset-icon">
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M8 2v4l2 2-2 2v4" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/><path d="M4 5l2 3-2 3M12 5l-2 3 2 3" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </div>
             <h3>Gaming Focused</h3>
           </div>
-          <p>Low latency, high FPS. Game processes are prioritized and network throttling is removed entirely.</p>
-          <div class="preset-dots">
-            <span class="dot-filled"></span><span class="dot-filled"></span><span class="dot-filled"></span><span class="dot-empty"></span><span class="dot-empty"></span>
-          </div>
+          <p>Low latency, high FPS. Game processes prioritized, network throttling removed.</p>
+          <div class="preset-meter" data-level="3"></div>
         </div>
 
-        <div class="preset-row scroll-reveal" style="--delay:120ms">
+        <div class="preset-row scroll-reveal" style="--delay:100ms">
           <div class="preset-left">
             <span class="preset-tag">03</span>
+            <div class="preset-icon">
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M8 1L14 4.5v7L8 15 2 11.5v-7L8 1Z" stroke="currentColor" stroke-width="1.2" stroke-linejoin="round"/><path d="M8 5v6" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg>
+            </div>
             <h3>Performance Focused</h3>
           </div>
-          <p>Aggressive resource reduction for demanding workloads. Every background cycle counts.</p>
-          <div class="preset-dots">
-            <span class="dot-filled"></span><span class="dot-filled"></span><span class="dot-filled"></span><span class="dot-filled"></span><span class="dot-empty"></span>
-          </div>
+          <p>Aggressive resource reduction for demanding workloads. Every cycle counts.</p>
+          <div class="preset-meter" data-level="4"></div>
         </div>
 
-        <div class="preset-row scroll-reveal" style="--delay:180ms">
+        <div class="preset-row scroll-reveal" style="--delay:150ms">
           <div class="preset-left">
             <span class="preset-tag">04</span>
+            <div class="preset-icon">
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><rect x="3" y="3" width="10" height="10" rx="1.5" stroke="currentColor" stroke-width="1.2"/><path d="M6 8h4M8 6v4" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/><circle cx="12" cy="4" r="2" fill="var(--mint)"/></svg>
+            </div>
             <h3>Privacy Focused</h3>
           </div>
           <p>All telemetry hosts blocked, cloud-integrated features disabled. Minimal footprint.</p>
-          <div class="preset-dots">
-            <span class="dot-filled"></span><span class="dot-filled"></span><span class="dot-filled"></span><span class="dot-filled"></span><span class="dot-empty"></span>
-          </div>
+          <div class="preset-meter" data-level="4"></div>
         </div>
 
-        <div class="preset-row scroll-reveal" style="--delay:240ms">
+        <div class="preset-row scroll-reveal" style="--delay:200ms">
           <div class="preset-left">
             <span class="preset-tag">05</span>
+            <div class="preset-icon">
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M8 1L14 4.5v7L8 15 2 11.5v-7L8 1Z" stroke="currentColor" stroke-width="1.2" stroke-linejoin="round" fill="var(--mint)" opacity="0.12"/><path d="M5.5 8l2 2L11 6" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </div>
             <h3>Paranoid Mode</h3>
           </div>
-          <p>Maximum aggression. Every block, every lock, every restriction applied. Not for the faint of heart.</p>
-          <div class="preset-dots">
-            <span class="dot-filled"></span><span class="dot-filled"></span><span class="dot-filled"></span><span class="dot-filled"></span><span class="dot-filled"></span>
-          </div>
+          <p>Maximum aggression. Every block, every lock, fully applied. Not for the faint of heart.</p>
+          <div class="preset-meter" data-level="5"></div>
         </div>
 
       </div>
     </div>
   </section>
 
-  <!-- ── INSTALL ───────────────────────────────────── -->
+  <!-- ── INSTALL ── -->
   <section class="install" id="install">
     <div class="container">
       <div class="section-label">Getting Started</div>
-      <h2 class="section-title scroll-reveal">Up and running<br />in minutes.</h2>
+      <h2 class="section-title scroll-reveal">Up in<br /><em>minutes.</em></h2>
       <p class="section-sub scroll-reveal">A clean Windows install is recommended. Create a restore point before you begin.</p>
       <div class="steps">
 
         <div class="step scroll-reveal">
-          <div class="step-num">1</div>
+          <div class="step-num">
+            <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M7 1L13 4.5V9.5L7 13 1 9.5V4.5L7 1Z" stroke="currentColor" stroke-width="1.1" stroke-linejoin="round"/></svg>
+          </div>
           <div class="step-body">
             <h4>Get AME Wizard</h4>
-            <p>Download the latest AME Wizard beta from the official site.</p>
+            <p>Download the latest AME Wizard from the official site.</p>
             <a href="https://ameliorated.io" target="_blank" class="step-link">ameliorated.io ↗</a>
           </div>
         </div>
 
-        <div class="step scroll-reveal" style="--delay:80ms">
-          <div class="step-num">2</div>
+        <div class="step scroll-reveal" style="--delay:60ms">
+          <div class="step-num">
+            <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M7 1v8M3 6l4 4 4-4" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/><path d="M1 11h12" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg>
+          </div>
           <div class="step-body">
             <h4>Download Mint</h4>
-            <p>Grab the latest <code>.apbx</code> release from the GitHub releases page.</p>
-            <a href="https://github.com/MINT-D8/Mint-Playbook/releases" target="_blank" class="step-link">View Releases ↗</a>
+            <p>Grab the latest <code>.apbx</code> from the GitHub releases page.</p>
+            <a href="https://github.com/Mint-D8/Mint-Playbook/releases" target="_blank" class="step-link">View Releases ↗</a>
           </div>
         </div>
 
-        <div class="step scroll-reveal" style="--delay:160ms">
-          <div class="step-num">3</div>
+        <div class="step scroll-reveal" style="--delay:120ms">
+          <div class="step-num">
+            <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><rect x="2" y="2" width="10" height="10" rx="1.5" stroke="currentColor" stroke-width="1.2"/><path d="M5 7l2 2 3-3" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
           <div class="step-body">
             <h4>Import & Unlock</h4>
-            <p>Import <code>Mint.apbx</code> in AME Wizard. When asked for the decryption password, enter:</p>
+            <p>Import <code>Mint.apbx</code> in AME Wizard. Decryption password:</p>
             <code class="inline-code">malte</code>
           </div>
         </div>
 
-        <div class="step scroll-reveal" style="--delay:240ms">
-          <div class="step-num">4</div>
+        <div class="step scroll-reveal" style="--delay:180ms">
+          <div class="step-num">
+            <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><circle cx="7" cy="7" r="5.5" stroke="currentColor" stroke-width="1.2"/><path d="M4.5 7.5L6.5 9.5L9.5 5.5" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
           <div class="step-body">
             <h4>Choose Your Preset</h4>
-            <p>Select a profile and any optional components through the wizard interface, then let it run.</p>
+            <p>Select a profile and optional components through the wizard, then let it run.</p>
           </div>
         </div>
 
-        <div class="step scroll-reveal" style="--delay:320ms">
-          <div class="step-num">5</div>
+        <div class="step scroll-reveal" style="--delay:240ms">
+          <div class="step-num">
+            <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M7 2C4.2 2 2 4.2 2 7s2.2 5 5 5 5-2.2 5-5" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/><path d="M9 4l3-2v3" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
           <div class="step-body">
             <h4>Restart</h4>
             <p>Reboot to finalize. Welcome to a cleaner Windows.</p>
@@ -291,33 +346,35 @@
     </div>
   </section>
 
-  <!-- ── CTA ───────────────────────────────────────── -->
+  <!-- ── CTA ── -->
   <section class="cta-section">
     <div class="container">
       <div class="cta-box scroll-reveal">
         <h2>Ready to clean up?</h2>
         <p>Open source. No ads. No telemetry. Just a better Windows.</p>
         <div class="cta-actions">
-          <a href="https://github.com/MINT-D8/Mint-Playbook/releases" target="_blank" class="btn btn-primary">Download Latest Release</a>
-          <a href="https://github.com/MINT-D8/Mint-Playbook" target="_blank" class="btn btn-ghost">View on GitHub ↗</a>
+          <a href="https://github.com/Mint-D8/Mint-Playbook/releases" target="_blank" class="btn btn-primary">Download Latest Release</a>
+          <a href="https://github.com/Mint-D8/Mint-Playbook" target="_blank" class="btn btn-ghost">View on GitHub ↗</a>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ── FOOTER ─────────────────────────────────────── -->
+  <!-- ── FOOTER ── -->
   <footer>
     <div class="container footer-inner">
       <div class="footer-logo">
-        <span class="logo-leaf">◆</span>
+        <svg class="logo-icon" width="16" height="16" viewBox="0 0 18 18" fill="none"><path d="M9 1L16 5V13L9 17L2 13V5L9 1Z" stroke="currentColor" stroke-width="1.2" fill="none"/><path d="M9 5L12 7V11L9 13L6 11V7L9 5Z" fill="currentColor" opacity="0.5"/></svg>
         <span>Mint Playbook</span>
       </div>
       <nav class="footer-links">
-        <a href="https://github.com/MINT-D8/Mint-Playbook" target="_blank">GitHub</a>
-        <a href="https://github.com/MINT-D8/Mint-Playbook/releases" target="_blank">Releases</a>
+        <a href="https://mint-d8.github.io/Mint-Playbook/" target="_blank">Home</a>
+        <a href="docs.html">Docs</a>
+        <a href="https://github.com/Mint-D8/Mint-Playbook" target="_blank">GitHub</a>
+        <a href="https://github.com/Mint-D8/Mint-Playbook/releases" target="_blank">Releases</a>
         <a href="https://ameliorated.io" target="_blank">AME Wizard</a>
       </nav>
-      <p class="footer-copy">Open source. Built with care.</p>
+      <p class="footer-copy">Open source · Built with care</p>
     </div>
   </footer>
 
